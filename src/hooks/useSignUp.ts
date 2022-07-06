@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const URL = "http://127.0.0.1:8080/createuser";
+const URL = "https://todo-22-app.herokuapp.com/createuser";
 
 export const useSignUp = () => {
   const navigate = useNavigate();
