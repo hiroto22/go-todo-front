@@ -11,7 +11,7 @@ type Todo = {
 };
 
 export const useGetTodos = (token: string) => {
-  const URL = "http://localhost:8080/get-usertodoList";
+  const URL = "https://todo-22-app.herokuapp.com/get-usertodoList";
   const [todos, setTodos] = useState<Todo[]>([]);
   const [doneTodos, setDoneTodos] = useState<Todo[]>([]);
 
