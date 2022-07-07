@@ -13,10 +13,10 @@ const App = () => {
     <RecoilRoot>
       <Routes>
         <Route path="/" element={<TopPage />} />
-        <Route path="/addtodo" element={<AddTodoPage />} />
+        {/* <Route path="/addtodo" element={<AddTodoPage />} />
         <Route path="edit-todo" element={<EditTodoPage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} /> */}
       </Routes>
     </RecoilRoot>
   );
