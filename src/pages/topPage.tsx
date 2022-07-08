@@ -11,7 +11,7 @@ export const TopPage = () => {
       {token !== "Bearer null" ? (
         <div>
           <Header />
-          {/* <Todos /> */}
+          <Todos />
           <AddIcon onClick={() => navigate("/addtodo")} />
         </div>
       ) : (
