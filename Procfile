@@ -1,1 +1,2 @@
-web: node dist/index.tsx
+web: npm start
+
