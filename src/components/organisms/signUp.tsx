@@ -26,7 +26,8 @@ export const SignUp = () => {
             </Grid>
             <Grid item justifyContent="center">
               <p>
-                登録済みの方は<a href="http://localhost:3000/login">こちら</a>へ
+                登録済みの方は
+                <a href={process.env.REACT_APP_URL}>こちら</a>へ
               </p>
             </Grid>
             <Grid item>
