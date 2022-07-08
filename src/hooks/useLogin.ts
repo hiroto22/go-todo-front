@@ -2,7 +2,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 console.log(process.env.REACT_APP_URL);
 
-const URL = `${process.env.REACT_APP_FRONT_URL}/login`;
+const URL = `${process.env.REACT_APP_URL}/login`;
 
 export const useLogin = () => {
   const navigate = useNavigate();
