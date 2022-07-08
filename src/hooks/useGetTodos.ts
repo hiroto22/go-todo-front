@@ -11,7 +11,7 @@ type Todo = {
 };
 
 export const useGetTodos = (token: string) => {
-  const URL = "https://todo-22-app.herokuapp.com/get-usertodoList";
+  const URL = `${process.env.REACT_APP_URL}/get-usertodoList`;
   const [todos, setTodos] = useState<Todo[]>([]);
   const [doneTodos, setDoneTodos] = useState<Todo[]>([]);
 
@@ -22,7 +22,9 @@ export const useGetTodos = (token: string) => {
       .then((res) => {
         setTodos(res.data);
       })
-      .catch((err) => {});
+      .catch((err) => {
+        console.log(err);
+      });
 
     axios
       .get(URL, {

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const useCreateTodo = () => {
-  const URL = "https://todo-22-app.herokuapp.com/createtodo";
+  const URL = `${process.env.REACT_APP_URL}/createtodo`;
 
   const CreateTodo = (token: string, todo: any) => {
     const data = { todo: todo };

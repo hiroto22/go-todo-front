@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const URL = "https://todo-22-app.herokuapp.com/createuser";
+const URL = `${process.env.REACT_APP_URL}/createuser`;
 
 export const useSignUp = () => {
   const navigate = useNavigate();

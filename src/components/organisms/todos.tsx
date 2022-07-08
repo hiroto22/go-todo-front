@@ -5,11 +5,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { useCompleteTodo } from "../../hooks/useCompleteTodo";
-import { useGetStorageToken } from "../../hooks/useGetStorageToken";
 import { useGetTodos } from "../../hooks/useGetTodos";
 import { editTodoState } from "../../state/editTodoState";
 import { TodoCard } from "../molecules/todoCard";
-import { TodoTab } from "../molecules/todoTab";
 
 export const Todos = () => {
   const { CompleteTodo, ReturnTodo, DeleteTodo } = useCompleteTodo();

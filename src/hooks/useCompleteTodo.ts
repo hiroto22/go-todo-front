@@ -4,7 +4,7 @@ import { useGetTodos } from "./useGetTodos";
 
 export const useCompleteTodo = () => {
   const CompleteTodo = (token: string, id: number) => {
-    const URL = `https://todo-22-app.herokuapp.com/completetodo?id=${id}&isComplete=false`;
+    const URL = `${process.env.REACT_APP_URL}/completetodo?id=${id}&isComplete=false`;
     axios
       .post(URL, null, { headers: { Authorization: token } })
       .then((res) => console.log(res))
@@ -12,7 +12,7 @@ export const useCompleteTodo = () => {
   };
 
   const ReturnTodo = (token: string, id: number) => {
-    const URL = `https://todo-22-app.herokuapp.com/completetodo?id=${id}&isComplete=true`;
+    const URL = `${process.env.REACT_APP_URL}/completetodo?id=${id}&isComplete=true`;
     axios
       .post(URL, null, { headers: { Authorization: token } })
       .then((res) => console.log(res))
@@ -20,7 +20,7 @@ export const useCompleteTodo = () => {
   };
 
   const DeleteTodo = (token: string, id: number) => {
-    const URL = `https://todo-22-app.herokuapp.com/deletetodo?id=${id}`;
+    const URL = `${process.env.REACT_APP_URL}/deletetodo?id=${id}`;
     axios
       .post(URL, null, { headers: { Authorization: token } })
       .then((res) => console.log(res))
