@@ -7,7 +7,7 @@ export const TopPage = () => {
   const navigate = useNavigate();
   const token = "Bearer " + sessionStorage.getItem("token");
   return (
-    <>
+    <div>
       {token !== "Bearer null" ? (
         <div>
           <Header />
@@ -17,6 +17,6 @@ export const TopPage = () => {
       ) : (
         <Navigate to="login" />
       )}
-    </>
+    </div>
   );
 };
