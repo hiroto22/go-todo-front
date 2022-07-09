@@ -26,8 +26,7 @@ export const Login = () => {
             <Grid item justifyContent="center">
               <p>
                 新規登録の方は
-                <a href={`${process.env.REACT_APP_FRONT_URL}/signup`}>こちら</a>
-                へ
+                <a href={"/signup"}>こちら</a>へ
               </p>
             </Grid>
             <Grid item>
