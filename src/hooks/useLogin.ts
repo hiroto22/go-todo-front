@@ -15,7 +15,6 @@ export const useLogin = () => {
       .post(URL, JSON.stringify(data))
       .then((res) => {
         sessionStorage.setItem("token", res.data.token);
-        console.log(sessionStorage.getItem("token"));
       })
       .catch((err) => {
         console.log(err);

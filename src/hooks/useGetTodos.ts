@@ -16,7 +16,6 @@ export const useGetTodos = (token: string) => {
   const [doneTodos, setDoneTodos] = useState<Todo[]>([]);
 
   useEffect(() => {
-    console.log("postしました");
     axios
       .get(URL, { params: { isdone: 0 }, headers: { Authorization: token } })
       .then((res) => {

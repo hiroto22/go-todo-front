@@ -14,7 +14,7 @@ export const Todos = () => {
   const [todo, setTodo] = useRecoilState(editTodoState);
   const [tabValue, setTabValue] = useState("1");
   const navigate = useNavigate();
-  const token = "Bearer " + sessionStorage.getItem("token");
+  const token = "Bearer  " + sessionStorage.getItem("token");
   const { todos, doneTodos } = useGetTodos(token);
   console.log(token);
 
