@@ -11,7 +11,7 @@ type Todo = {
 };
 
 export const useGetTodos = (token: string) => {
-  const URL = `${process.env.REACT_APP_URL}/get-usertodoList`;
+  const URL = `${process.env.REACT_APP_URL}/getusertodoList`;
   const [todos, setTodos] = useState<Todo[]>([]);
   const [doneTodos, setDoneTodos] = useState<Todo[]>([]);
 
