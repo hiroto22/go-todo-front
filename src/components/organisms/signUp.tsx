@@ -1,5 +1,6 @@
 import { Card, CardContent, Grid } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useSignUp } from "../../hooks/useSignUp";
 import { BaseButton } from "../atoms/baseButton";
 import { InputArea } from "../atoms/inputArea";
@@ -27,7 +28,7 @@ export const SignUp = () => {
             <Grid item justifyContent="center">
               <p>
                 登録済みの方は
-                <a href={process.env.REACT_APP_URL}>こちら</a>へ
+                <Link to="/login">こちら</Link>へ
               </p>
             </Grid>
             <Grid item>
