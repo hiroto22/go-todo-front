@@ -28,15 +28,15 @@ export const EditTodo = () => {
         <div>
           <BaseButton
             text="タスクに戻す"
-            onClick={() => {
-              ReturnTodo(token, todo.id);
+            onClick={async () => {
+              await ReturnTodo(token, todo.id);
               navigate("/");
             }}
           />
           <BaseButton
             text="削除"
-            onClick={() => {
-              DeleteTodo(token, todo.id);
+            onClick={async () => {
+              await DeleteTodo(token, todo.id);
               navigate("/");
             }}
           />
@@ -45,15 +45,15 @@ export const EditTodo = () => {
         <div>
           <BaseButton
             text="タスク完了"
-            onClick={() => {
-              CompleteTodo(token, todo.id);
+            onClick={async () => {
+              await CompleteTodo(token, todo.id);
               navigate("/");
             }}
           />
           <BaseButton
             text="削除"
-            onClick={() => {
-              DeleteTodo(token, todo.id);
+            onClick={async () => {
+              await DeleteTodo(token, todo.id);
               navigate("/");
             }}
           />
