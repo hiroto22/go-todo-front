@@ -3,9 +3,9 @@ import { useGetStorageToken } from "./useGetStorageToken";
 import { useGetTodos } from "./useGetTodos";
 
 export const useCompleteTodo = () => {
-  const CompleteTodo = (token: string, id: number) => {
+  const CompleteTodo = async (token: string, id: number) => {
     const URL = `${process.env.REACT_APP_URL}/completetodo?id=${id}&isComplete=false`;
-    axios
+    await axios
       .post(URL, null, { headers: { Authorization: token } })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
