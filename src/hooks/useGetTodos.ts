@@ -1,19 +1,14 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-
-type Todo = {
-  id: number;
-  userid: any;
-  todo: string;
-  createdat: Date;
-  updatedat: Date;
-  isDone: boolean;
-};
+import { useEffect } from "react";
+import { useRecoilState } from "recoil";
+import { DoneTodoState, TodoState } from "../state/todoState";
 
 export const useGetTodos = (token: string) => {
   const URL = `${process.env.REACT_APP_URL}/getusertodoList`;
-  const [todos, setTodos] = useState<Todo[]>([]);
-  const [doneTodos, setDoneTodos] = useState<Todo[]>([]);
+  // const [todos, setTodos] = useState<Todo[]>([]);
+  // const [doneTodos, setDoneTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useRecoilState(TodoState);
+  const [doneTodos, setDoneTodos] = useRecoilState(DoneTodoState);
 
   useEffect(() => {
     axios
@@ -36,7 +31,7 @@ export const useGetTodos = (token: string) => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [todos, doneTodos]);
 
   return { todos, doneTodos };
 };
