@@ -31,7 +31,7 @@ export const useGetTodos = (token: string) => {
       .catch((err) => {
         console.log(err);
       });
-  }, [todos, doneTodos]);
+  }, [token]);
 
   return { todos, doneTodos };
 };
