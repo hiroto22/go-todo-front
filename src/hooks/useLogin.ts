@@ -6,6 +6,7 @@ const URL = `${process.env.REACT_APP_URL}/login`;
 
 export const useLogin = () => {
   const navigate = useNavigate();
+
   const onClickLogin = async (
     email: string | undefined,
     password: string | undefined
@@ -13,8 +14,8 @@ export const useLogin = () => {
     const data = { email: email, password: password };
     await axios
       .post(URL, JSON.stringify(data))
-      .then((res) => {
-        sessionStorage.setItem("token", res.data.token);
+      .then(async (res) => {
+        await sessionStorage.setItem("token", res.data.token);
       })
       .catch((err) => {
         console.log(err);
