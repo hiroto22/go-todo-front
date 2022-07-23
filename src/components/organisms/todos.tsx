@@ -4,20 +4,19 @@ import { Box } from "@mui/system";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { useCompleteTodo } from "../../hooks/useCompleteTodo";
 import { useGetTodos } from "../../hooks/useGetTodos";
 import { editTodoState } from "../../state/editTodoState";
 import { TodoCard } from "../molecules/todoCard";
 
 export const Todos = () => {
-  const { CompleteTodo, ReturnTodo, DeleteTodo } = useCompleteTodo();
   const [todo, setTodo] = useRecoilState(editTodoState);
-  const [tabValue, setTabValue] = useState("1");
+
+  const [tabValue, setTabValue] = useState("1"); //画面上で完了と未完了を切り替える 1:未完了　2:完了
   const navigate = useNavigate();
   const token = "Bearer " + sessionStorage.getItem("token");
   const { todos, doneTodos } = useGetTodos(token);
-  console.log(token);
 
+  //todoのリストを取得してmapでそれぞれ表示 クリックすると /edit-todoへ移動
   return (
     <div>
       <Box sx={{ flexGrow: 1, overflow: "hidden", px: 3 }}>
@@ -35,16 +34,14 @@ export const Todos = () => {
                   <Tab label="完了したタスク" value="2" />
                 </TabList>
               </Box>
+
+              {/* 未完了 */}
               <TabPanel value="1">
                 {todos ? (
                   todos.map((res) => (
                     <div key={res.id}>
                       <TodoCard
                         todo={res.todo}
-                        text="完了"
-                        text2="削除"
-                        onClick={() => CompleteTodo(token, res.id)}
-                        onClick2={() => DeleteTodo(token, res.id)}
                         onClickCard={async () => {
                           await setTodo({
                             id: res.id,
@@ -62,16 +59,14 @@ export const Todos = () => {
                   </div>
                 )}
               </TabPanel>
+
+              {/* 完了 */}
               <TabPanel value="2">
                 {doneTodos ? (
                   doneTodos.map((res) => (
                     <div key={res.id}>
                       <TodoCard
                         todo={res.todo}
-                        text="戻す"
-                        text2="削除"
-                        onClick={() => ReturnTodo(token, res.id)}
-                        onClick2={() => DeleteTodo(token, res.id)}
                         onClickCard={async () => {
                           await setTodo({
                             id: res.id,

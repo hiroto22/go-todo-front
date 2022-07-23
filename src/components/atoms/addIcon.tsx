@@ -5,6 +5,7 @@ type AddIconBUtton = {
   onClick: any;
 };
 
+//todoを登録する時に押すボタン
 export const AddIcon = (props: AddIconBUtton) => {
   return (
     <SDiv>

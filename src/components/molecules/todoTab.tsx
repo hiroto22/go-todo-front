@@ -1,5 +1,3 @@
-import { TabsContext } from "@mui/base";
-import { PropaneSharp } from "@mui/icons-material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { Tab } from "@mui/material";
 import { Box } from "@mui/system";
@@ -10,6 +8,7 @@ type TabState = {
   content: any;
 };
 
+//現在使用していない
 export const TodoTab = (props: TabState) => {
   return (
     <TabContext value={props.value}>

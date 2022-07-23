@@ -4,6 +4,7 @@ console.log(process.env.REACT_APP_URL);
 
 const URL = `${process.env.REACT_APP_URL}/login`;
 
+//loginするためのAPIを呼び出す
 export const useLogin = () => {
   const navigate = useNavigate();
 

@@ -5,6 +5,7 @@ import { useLogin } from "../../hooks/useLogin";
 import { BaseButton } from "../atoms/baseButton";
 import { InputArea } from "../atoms/inputArea";
 
+//login画面
 export const Login = () => {
   const [email, setEmail] = useState<string>();
   const [passWord, setPassWord] = useState<string>();

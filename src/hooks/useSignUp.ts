@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const URL = `${process.env.REACT_APP_URL}/createuser`;
 
+//新規登録に必要なAPIを呼び出す
 export const useSignUp = () => {
   const navigate = useNavigate();
   const onClickSignUp = async (

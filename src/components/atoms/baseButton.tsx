@@ -5,6 +5,7 @@ type onClickBaseButton = {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
+//ログインや追加などで使用するボタン
 export const BaseButton = (props: onClickBaseButton) => {
   return (
     <Button
@@ -16,7 +17,3 @@ export const BaseButton = (props: onClickBaseButton) => {
     </Button>
   );
 };
-
-// const SButton = styled.button`
-//   background-color: blue;
-// `;

@@ -1,6 +1,7 @@
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
+//Header todoの文字と logoutボタン
 export const Header = () => {
   const navigate = useNavigate();
   return (

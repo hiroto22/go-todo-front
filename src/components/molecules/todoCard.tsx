@@ -1,15 +1,11 @@
 import { Card, CardActionArea, CardContent } from "@mui/material";
-import { BaseButton } from "../atoms/baseButton";
 
 type TodoCardProps = {
   todo: string;
-  text: string;
-  text2: string;
-  onClick: any;
-  onClick2: any;
   onClickCard: any;
 };
 
+//todoが個別に表示される横長のカード
 export const TodoCard = (props: TodoCardProps) => {
   return (
     <Card sx={{ margin: "8px", display: "flex", alignItems: "center" }}>

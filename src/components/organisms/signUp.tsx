@@ -11,6 +11,7 @@ export const SignUp = () => {
   const [passWord, setPassWord] = useState<string>();
   const onClickSignUp = useSignUp();
 
+  //新規登録画面
   return (
     <Grid container justifyContent="center" padding={10}>
       <Card sx={{ width: 800, minHeight: 400 }}>

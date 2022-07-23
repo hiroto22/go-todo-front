@@ -3,10 +3,9 @@ import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { DoneTodoState, TodoState } from "../state/todoState";
 
+//todoの一覧を取得するAPIを呼ぶ
 export const useGetTodos = (token: string) => {
   const URL = `${process.env.REACT_APP_URL}/getusertodoList`;
-  // const [todos, setTodos] = useState<Todo[]>([]);
-  // const [doneTodos, setDoneTodos] = useState<Todo[]>([]);
   const [todos, setTodos] = useRecoilState(TodoState);
   const [doneTodos, setDoneTodos] = useRecoilState(DoneTodoState);
 

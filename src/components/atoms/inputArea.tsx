@@ -3,6 +3,7 @@ type InputAreaState = {
   onChange: any;
 };
 
+//email,passwordなど情報を入力する欄　placeholderを指定できる
 export const InputArea = (props: InputAreaState) => {
   return (
     <div>
