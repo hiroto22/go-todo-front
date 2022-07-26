@@ -34,6 +34,7 @@ export const SignUp = () => {
             </Grid>
             <Grid item>
               <InputArea
+                type="text"
                 text="名前"
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setName(e.target.value)
@@ -42,6 +43,7 @@ export const SignUp = () => {
             </Grid>
             <Grid item>
               <InputArea
+                type="text"
                 text="メールアドレス"
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setEmail(e.target.value)
@@ -50,6 +52,7 @@ export const SignUp = () => {
             </Grid>
             <Grid item>
               <InputArea
+                type="password"
                 text="パスワード"
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setPassWord(e.target.value)

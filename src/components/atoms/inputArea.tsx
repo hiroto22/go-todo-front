@@ -1,4 +1,5 @@
 type InputAreaState = {
+  type: string;
   text: string;
   onChange: any;
 };
@@ -7,7 +8,11 @@ type InputAreaState = {
 export const InputArea = (props: InputAreaState) => {
   return (
     <div>
-      <input onChange={props.onChange} placeholder={props.text}></input>
+      <input
+        type={props.type}
+        onChange={props.onChange}
+        placeholder={props.text}
+      ></input>
     </div>
   );
 };
