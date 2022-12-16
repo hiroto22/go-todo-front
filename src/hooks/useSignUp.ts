@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const URL = `${process.env.REACT_APP_URL}/createuser`;
+const URL = `${process.env.REACT_APP_URL}/signup`;
 
 //新規登録に必要なAPIを呼び出す
 export const useSignUp = () => {
